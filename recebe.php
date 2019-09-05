@@ -28,6 +28,8 @@ $senha = sha1($senhaUsuario);
 
     $busca = $sql->fetch();
     if($busca != null){
+        //Colocando no me do usuário na Sessão
+        $_SESSION["nomeUsuario"] = $nomeUsuario;
         echo "OK!";
     }else{
         echo "Usuário e senha não conferem!";
