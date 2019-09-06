@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 23-Ago-2019 às 14:25
+-- Tempo de geração: 06-Set-2019 às 16:44
 -- Versão do servidor: 10.3.16-MariaDB
 -- versão do PHP: 7.3.7
 
@@ -30,19 +30,27 @@ USE `sistemade_login`;
 --
 -- Estrutura da tabela `usuario`
 --
--- Criação: 23-Ago-2019 às 17:09
--- Última actualização: 23-Ago-2019 às 17:09
---
 
-DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE `usuario` (
   `idUsuario` int(10) UNSIGNED NOT NULL,
   `nome` varchar(100) COLLATE utf8mb4_bin NOT NULL,
   `nomeUsuario` varchar(100) COLLATE utf8mb4_bin NOT NULL,
   `email` varchar(100) COLLATE utf8mb4_bin NOT NULL,
   `senha` char(40) COLLATE utf8mb4_bin NOT NULL,
-  `dataCriacao` datetime NOT NULL
+  `dataCriacao` datetime NOT NULL,
+  `avatar` varchar(200) COLLATE utf8mb4_bin NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+--
+-- Extraindo dados da tabela `usuario`
+--
+
+INSERT INTO `usuario` (`idUsuario`, `nome`, `nomeUsuario`, `email`, `senha`, `dataCriacao`, `avatar`) VALUES
+(1, 'Nicollas Patrick', 'Nixollassps', 'souza.nih@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', '2019-09-06 13:38:40', ''),
+(2, 'Wanda Maximoff', 'Scarlet Witch', 'SW@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', '2019-09-06 16:07:30', 'https://i.ytimg.com/vi/izgx5Ln1i7c/maxresdefault.jpg'),
+(3, 'Wanda Maximoff', 'Wandinha Fodona', 'wm@soufoda.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', '2019-09-06 16:22:33', 'https://www.screengeek.net/wp-content/uploads/2018/05/avengers-infinity-war-scarlet-witch.jpg'),
+(4, 'Wanda Maximoff', 'Wanda', 'WandaEscarlate@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', '2019-09-06 16:24:27', 'https://www.screengeek.net/wp-content/uploads/2018/05/avengers-infinity-war-scarlet-witch.jpg'),
+(5, 'Wanda Maximoff', 'ScarletWanda', 'swm@gmail.com', 'f7c3bc1d808e04732adf679965ccc34ca7ae3441', '2019-09-06 16:34:32', 'https://a.wattpad.com/useravatar/-TaintedTragedy-.256.113099.jpg');
 
 --
 -- Índices para tabelas despejadas
@@ -63,7 +71,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idUsuario` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `idUsuario` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
