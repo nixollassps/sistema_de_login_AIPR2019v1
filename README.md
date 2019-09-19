@@ -1,7 +1,7 @@
 # sistema_de_login_AIPR2019v1
 Sistema de Login com registro de novo usuário e recuperação de senha 
 ##aula 09 - 19/09/2019
-
+Sistema de recuperação de senha sem ~envio de e-mail~.
 ##aula 08 - 12/09/2019
 Gerando uma nova senha junto com o Desafio de Carrossel de Imagens
 ##aula 07 - 09/09/2019

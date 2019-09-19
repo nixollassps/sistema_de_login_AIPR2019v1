@@ -53,7 +53,8 @@ require_once 'session.php';
     <main class="container mt-4">
         <div class="row">
             <div class="offset-lg2 col-3">
-                <img src="<?= $urlAvatar ?>" alt="Foto de <?= $usuario ?>" <h1 class="text-light">Perfil de usuário</h1>
+               
+                <img src="<?= $urlAvatar ?>" alt="Foto de <?= $usuario ?>">
             </div>
             <div class="col-7">
                 <h1 class="text-light">Perfil de Usuário</h1>
